@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   color: #607b96;
-  border-right: 1px solid #607b96;
+  border-right: 1px solid #1e2d3d;
   background-color: inherit;
   transition: filter 1s;
 }
@@ -33,7 +33,7 @@
   line-height: normal;
   color: #607b96;
   background-color: inherit;
-  border-left: 1px solid #607b96;
+  border-left: 1px solid #1e2d3d;
   transition: filter 1s;
 }
 /* .btn__withtext:hover {

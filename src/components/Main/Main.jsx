@@ -1,5 +1,5 @@
-import React from "react";
+import s from "./Main.module.css";
 
 export default function Main() {
-  return <div></div>;
+  return <div className={s.wrapper}></div>;
 }

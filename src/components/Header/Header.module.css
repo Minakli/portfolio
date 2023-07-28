@@ -4,7 +4,7 @@
   justify-content: flex-start;
   align-items: center;
   color: #607b96;
-  border-bottom: 1px solid #607b96;
+  border-bottom: 1px solid #1e2d3d;
   border-radius: 8px 8px 0 0;
 }
 
@@ -16,7 +16,7 @@
   height: 100%;
   padding-left: 8px;
   padding-right: auto;
-  border-right: 1px solid #607b96;
+  border-right: 1px solid #1e2d3d;
   transition: filter 1s;
 }
 .wrapper span {
@@ -45,7 +45,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  border-right: 1px solid #607b96;
+  border-right: 1px solid #1e2d3d;
   padding: 0 17px 0 18px;
   transition: filter 1s;
 }
@@ -62,7 +62,7 @@
   height: 100%;
   margin-left: auto;
   transition: filter 1s;
-  border-left: 1px solid #607b96;
+  border-left: 1px solid #1e2d3d;
 }
 .contact:hover {
   /* filter: brightness(500%);
