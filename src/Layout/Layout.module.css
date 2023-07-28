@@ -1,0 +1,14 @@
+.bg {
+  box-sizing: border-box;
+  margin: 0;
+  min-height: 100vh;
+  padding: 30px;
+  background-color: #010c15;
+}
+.wrapper {
+  /* margin: 0 30px 30px 30px; */
+  /* margin-top: 30px; */
+  border: 1px solid #607b96;
+  border-radius: 8px;
+  background-color: #1e2d3d;
+}

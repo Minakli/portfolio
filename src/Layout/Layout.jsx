@@ -1,8 +1,9 @@
 import s from "./Layout.module.css";
 import Header from "../components/Header/Header";
+import Main from "../components/Main/Main";
 import Footer from "../components/Footer/Footer";
 
-export default function Layout({}) {
+export default function Layout({ children }) {
   const navBtn = [
     {
       name: "_hello",
@@ -13,9 +14,12 @@ export default function Layout({}) {
     },
   ];
   return (
-    <div>
-      <Header navBtn={navBtn} />
-      <Footer />
+    <div className={s.bg}>
+      <div className={s.wrapper}>
+        <Header navBtn={navBtn} />
+        <Main>{children}</Main>
+        <Footer />
+      </div>
     </div>
   );
 }
