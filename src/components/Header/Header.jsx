@@ -1,6 +1,9 @@
 import s from "./Header.module.css";
+import NavBtn from "../../ui/NavBtn/NavBtn";
+import { useState } from "react";
 
 export default function Header({ navBtn }) {
+  const [activePage, setActivePage] = useState("_hello");
   return (
     <header className={s.wrapper}>
       <div className={s.name}>
@@ -8,12 +11,20 @@ export default function Header({ navBtn }) {
         <div className={s.flex_shrink}></div>
       </div>
       {navBtn.map((elem, index) => (
-        <div className={s.nav} key={index}>
-          <span className={s.span}>{elem.name}</span>
-        </div>
+        <NavBtn
+          key={index}
+          elem={elem}
+          index={index}
+          activePage={activePage}
+          setActivePage={setActivePage}
+        />
       ))}
       <div className={s.contact}>
-        <span className={s.span}>_contact-me</span>
+        <NavBtn
+          activePage={activePage}
+          setActivePage={setActivePage}
+          elem={{ name: "_contact-me" }}
+        />
       </div>
     </header>
   );

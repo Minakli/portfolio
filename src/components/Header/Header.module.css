@@ -14,58 +14,18 @@
   align-items: center;
   max-width: 311px;
   height: 100%;
-  padding-left: 8px;
+  padding-left: 22px;
   padding-right: auto;
   border-right: 1px solid #1e2d3d;
   transition: filter 1s;
 }
-.wrapper span {
-  display: block;
-  flex-shrink: 0;
-}
-.span {
-  padding: 14px;
-  transition: filter 0.5s;
-}
-.span:hover {
-  filter: brightness(500%);
-  transition: filter 0.5s;
-}
+/* Сжимаемый контейнер*/
 .flex_shrink {
   width: 211px;
   flex-shrink: 1;
 }
-.name:hover {
-  /* color: #ffffff; */
-  /* filter: brightness(500%);
-  transition: filter 0.5s; */
-}
-.nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  border-right: 1px solid #1e2d3d;
-  padding: 0 17px 0 18px;
-  transition: filter 1s;
-}
-.nav:hover {
-  /* color: #ffffff; */
-  /* filter: brightness(500%);
-  transition: filter 0.5s; */
-}
+
 .contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 153px;
-  height: 100%;
   margin-left: auto;
-  transition: filter 1s;
   border-left: 1px solid #1e2d3d;
-}
-.contact:hover {
-  /* filter: brightness(500%);
-  transition: filter 0.5s; */
-  /* color: #ffffff; */
 }

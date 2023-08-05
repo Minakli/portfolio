@@ -6,9 +6,12 @@ import git from "./assets/git.svg";
 
 export default function Footer() {
   const footerSocial = [
-    { img: instagram },
-    { img: facebook },
-    { img: git, text: "Minakli\u00A0" },
+    { img: instagram, src: "https://instagram.com" },
+    {
+      img: facebook,
+      src: "https://www.facebook.com/profile.php?id=100092998994065",
+    },
+    { img: git, src: "https://github.com/Minakli", text: "Minakli\u00A0" },
   ];
   return (
     <div className={s.wrapper}>
@@ -22,6 +25,7 @@ export default function Footer() {
           footerImg={elem.img}
           footerImgWidth={elem.width}
           footerText={elem.text}
+          footerSrc={elem.src}
         />
       ))}
       {/* </div> */}

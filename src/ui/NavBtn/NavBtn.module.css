@@ -1,0 +1,60 @@
+.nav__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: inherit;
+  color: #607b96;
+  border-right: 1px solid #1e2d3d;
+  transition: filter 1s;
+  position: relative;
+}
+.nav__btn_active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: white;
+  color: #607b96;
+  border-right: 1px solid #1e2d3d;
+  transition: filter 1s;
+}
+
+.span {
+  display: block;
+  flex-shrink: 0;
+  padding: 14px 31px 14px 32px;
+  transition: filter 0.5s;
+}
+.span__active {
+  display: block;
+  flex-shrink: 0;
+  padding: 14px 31px 14px 32px;
+  transition: filter 0.5s;
+  filter: brightness(500%);
+}
+.span:hover {
+  filter: brightness(500%);
+  transition: filter 0.5s;
+  cursor: pointer;
+}
+.span__active:hover {
+  filter: brightness(500%);
+  transition: filter 0.5s;
+  cursor: pointer;
+}
+.span:active {
+  filter: brightness(50%);
+}
+.span__active:active {
+  filter: brightness(50%);
+}
+.active__line {
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #fea55f;
+}

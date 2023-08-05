@@ -36,10 +36,6 @@
   border-left: 1px solid #1e2d3d;
   transition: filter 1s;
 }
-/* .btn__withtext:hover {
-  transition: filter 0.5s;
-  filter: brightness(500%);
-} */
 .wrapper {
   display: flex;
   justify-content: center;
@@ -50,6 +46,10 @@
 .wrapper:hover {
   transition: filter 0.5s;
   filter: brightness(500%);
+  cursor: pointer;
+}
+.wrapper:active {
+  filter: brightness(50%);
 }
 .img {
   display: block;
