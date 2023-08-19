@@ -2,7 +2,7 @@ import s from "./Header.module.css";
 import NavBtn from "../../ui/NavBtn/NavBtn";
 import { useState } from "react";
 
-export default function Header({ navBtn }) {
+export default function Header({ arrNavBtn }) {
   const [activePage, setActivePage] = useState("_hello");
   return (
     <header className={s.wrapper}>
@@ -10,7 +10,7 @@ export default function Header({ navBtn }) {
         <span className={s.span}>Plan-D</span>
         <div className={s.flex_shrink}></div>
       </div>
-      {navBtn.map((elem, index) => (
+      {arrNavBtn.map((elem, index) => (
         <NavBtn
           key={index}
           elem={elem}
@@ -23,7 +23,7 @@ export default function Header({ navBtn }) {
         <NavBtn
           activePage={activePage}
           setActivePage={setActivePage}
-          elem={{ name: "_contact-me" }}
+          elem={{ name: "_contact-me", path: "/contacts" }}
         />
       </div>
     </header>

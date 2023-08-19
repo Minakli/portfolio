@@ -1,0 +1,85 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 126px;
+  font-family: "Fira Code", sans-serif;
+  margin-top: 21px;
+}
+.left__side {
+  width: 521px;
+  max-height: calc(100vh - 198px);
+  max-width: calc((100vh - 198px));
+}
+.hi__all {
+  color: #e5e9f0;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+}
+.h1 {
+  color: #e5e9f0;
+  font-size: 62px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.profession {
+  margin: 0 0 81px;
+  color: #4d5bce;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+}
+.description {
+  color: #607b96;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+}
+
+.git__link {
+  display: flex;
+  gap: 10px;
+}
+
+.blue__text {
+  color: #4d5bce;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.green__text {
+  color: #43d9ad;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.white__text {
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.red__text {
+  color: #e99287;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+.game {
+  width: 510px;
+  height: 475px;
+  max-height: calc(100vh - 198px);
+  max-width: calc((100vh - 198px) * 0.93);
+  background-color: rgba(4, 148, 155, 0.656);
+}

@@ -1,8 +1,10 @@
 import s from "./NavBtn.module.css";
+import { Link } from "react-router-dom";
 
 export default function NavBtn({ elem, index, activePage, setActivePage }) {
   return (
-    <div
+    <Link
+      to={elem.path}
       className={s.nav__btn}
       key={index}
       onClick={() => {
@@ -13,6 +15,6 @@ export default function NavBtn({ elem, index, activePage, setActivePage }) {
         {elem.name}
       </span>
       <div className={activePage === elem.name ? s.active__line : null}></div>
-    </div>
+    </Link>
   );
 }
