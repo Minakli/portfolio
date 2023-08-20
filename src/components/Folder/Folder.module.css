@@ -1,0 +1,17 @@
+.wrapper {
+}
+.btn {
+  display: flex;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: orange;
+  background-color: inherit;
+}
+.arrow {
+}
+.folderImg {
+}
+.folder__name {
+}

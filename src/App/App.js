@@ -1,10 +1,10 @@
 import Layout from "../Layout/Layout";
 import "./Global.module.css";
 import Hello from "../pages/Hello/Hello";
-import About from "../components/pages/About/About";
-import Projects from "../components/pages/Projects/Projects";
-import Contacts from "../components/pages/Contacts/Contacts";
-import NotFound from "../components/pages/NotFound/NotFound";
+import About from "../pages/About/About";
+import Projects from "../pages/Projects/Projects";
+import Contacts from "../pages/Contacts/Contacts";
+import NotFound from "../pages/NotFound/NotFound";
 import { Routes, Route } from "react-router-dom";
 
 function App() {

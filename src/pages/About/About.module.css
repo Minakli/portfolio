@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  min-height: calc(100vh - 168px);
+  width: 100%;
+}
+.left__sidebar {
+  width: 68px;
+  border-right: 1px solid #1e2d3d;
+}
+.categories__panel {
+  width: 243px;
+  border-right: 1px solid #1e2d3d;
+}
+.left__section {
+  width: 40%;
+  border-right: 1px solid #1e2d3d;
+}
+.right__section {
+  width: calc(100vw - 68px - 263px - 40%);
+  min-width: 350px;
+}
