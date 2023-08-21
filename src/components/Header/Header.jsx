@@ -3,7 +3,7 @@ import NavBtn from "../../ui/NavBtn/NavBtn";
 import { useState } from "react";
 
 export default function Header({ arrNavBtn }) {
-  const [activePage, setActivePage] = useState("_hello");
+  const [activePage, setActivePage] = useState("");
   return (
     <header className={s.wrapper}>
       <div className={s.name}>

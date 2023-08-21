@@ -3,4 +3,8 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: Fira Code, sans-serif;
+  /* background-color: inherit; */
 }

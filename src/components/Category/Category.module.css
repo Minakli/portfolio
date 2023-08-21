@@ -1,5 +1,24 @@
+.wrapper {
+  border-bottom: 1px solid #1e2d3d;
+}
 .title {
   color: aliceblue;
 }
+
+.btn {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  padding: 10px 14px 9px;
+  background-color: inherit;
+  border-bottom: 1px solid #1e2d3d;
+  cursor: pointer;
+}
 .body {
+  padding: 12px 0 17px;
+}
+.body__hidden {
+  display: none;
 }

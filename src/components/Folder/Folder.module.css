@@ -2,16 +2,42 @@
 }
 .btn {
   display: flex;
-  border: none;
-  outline: none;
-  text-decoration: none;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0 10px 17px;
   cursor: pointer;
-  color: orange;
+  color: #607b96;
   background-color: inherit;
+}
+.btn__active {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0 10px 17px;
+  cursor: pointer;
+  color: #607b96;
+  background-color: inherit;
+  /* transition: filter 0.5s;
+  filter: brightness(300%); */
 }
 .arrow {
 }
-.folderImg {
+.folder__icon {
+  margin: 0 9px 0 13px;
 }
 .folder__name {
+  color: #607b96;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.folder__name_active {
+  color: #607b96;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: filter 0.5s;
+  filter: brightness(500%);
 }
