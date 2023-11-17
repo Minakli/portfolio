@@ -5,8 +5,7 @@ import Folder from "../../components/Folder/Folder";
 import aboutCategories from "../../data/about.js";
 
 export default function About({}) {
-  // const [showCategory, setShowCategory] = useState("");
-  const [showFolder, setShowFolder] = useState("");
+  const [showFolder, setShowFolder] = useState(aboutCategories);
   return (
     <div className={s.wrapper}>
       <div className={s.left__sidebar}></div>
@@ -16,17 +15,13 @@ export default function About({}) {
             <Category
               key={index}
               elem={elem}
+              showFolder={showFolder}
               setShowFolder={setShowFolder}
-              // showCategory={showCategory}
-              // setShowCategory={setShowCategory}
             >
-              {/* {elem.folders.map((elem, index) => {
-              <Folder key={index} name={elem.name} filesArr={elem.filesArr} />;
-            })} */}
-              {elem.folders.map((el) => (
+              {elem.folders.map((folder) => (
                 <Folder
                   key={Math.random()}
-                  elem={el}
+                  folder={folder}
                   showFolder={showFolder}
                   setShowFolder={setShowFolder}
                 >

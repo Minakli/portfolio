@@ -6,20 +6,35 @@ import folderRed from "./folder-red.svg";
 import folderGreen from "./folder-green.svg";
 import folderBlue from "./folder-blue.svg";
 
-export default function Folder({ elem, children, showFolder, setShowFolder }) {
+export default function Folder({
+  folder,
+  children,
+  showFolder,
+  setShowFolder,
+}) {
+  // console.log(showFolder);
   return (
     <div className={s.wrapper}>
       <button
-        className={showFolder === elem.name ? s.btn__active : s.btn}
-        onClick={() =>
-          showFolder === elem.name
-            ? setShowFolder("")
-            : setShowFolder(elem.name)
-        }
+        className={folder.isOpen === true ? s.btn__active : s.btn}
+        onClick={() => {
+          folder.isOpen === true
+            ? (folder.isOpen = false)
+            : (folder.isOpen = true);
+
+          let newShowFolder = showFolder.map((item) => {
+            let newFolders = item.folders.map((unit) =>
+              unit.name === folder.name ? folder : unit
+            );
+            item.folders = newFolders;
+            return item;
+          });
+          setShowFolder(newShowFolder);
+        }}
       >
         <img
           className={s.arrow}
-          src={showFolder === elem.name ? arrowDown : arrowRight}
+          src={folder.isOpen === true ? arrowDown : arrowRight}
           alt="˃"
           width="13"
           height="8"
@@ -27,11 +42,11 @@ export default function Folder({ elem, children, showFolder, setShowFolder }) {
         <img
           className={s.folder__icon}
           src={
-            elem.color === "red"
+            folder.color === "red"
               ? folderRed
-              : elem.color === "green"
+              : folder.color === "green"
               ? folderGreen
-              : elem.color === "blue"
+              : folder.color === "blue"
               ? folderBlue
               : null
           }
@@ -41,10 +56,10 @@ export default function Folder({ elem, children, showFolder, setShowFolder }) {
         />
         <p
           className={
-            showFolder === elem.name ? s.folder__name_active : s.folder__name
+            folder.isOpen === true ? s.folder__name_active : s.folder__name
           }
         >
-          {elem.name}
+          {folder.name}
         </p>
       </button>
       {children}

@@ -1,26 +1,29 @@
 const aboutCategories = [
   {
     title: "blablabla",
+    isOpen: false,
     folders: [
-      { name: "bio", color: "red" },
-      { name: "interests", color: "green" },
-      { name: "education", color: "blue" },
+      { name: "bio", color: "red", isOpen: false },
+      { name: "interests", color: "green", isOpen: false },
+      { name: "education", color: "blue", isOpen: false },
     ],
   },
   {
     title: "blablab",
+    isOpen: false,
     folders: [
-      { name: "bi", color: "red" },
-      { name: "interest", color: "green" },
-      { name: "educatio", color: "blue" },
+      { name: "bi", color: "red", isOpen: false },
+      { name: "interest", color: "green", isOpen: false },
+      { name: "educatio", color: "blue", isOpen: false },
     ],
   },
   {
     title: "blabl",
+    isOpen: false,
     folders: [
-      { name: "b", color: "red" },
-      { name: "interes", color: "green" },
-      { name: "educati", color: "blue" },
+      { name: "b", color: "red", isOpen: false },
+      { name: "interes", color: "green", isOpen: false },
+      { name: "educati", color: "blue", isOpen: false },
     ],
   },
 ];

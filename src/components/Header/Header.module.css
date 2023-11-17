@@ -19,6 +19,10 @@
   border-right: 1px solid #1e2d3d;
   transition: filter 1s;
 }
+.span {
+  display: block;
+  min-width: 100px;
+}
 /* Сжимаемый контейнер*/
 .flex_shrink {
   width: 211px;
