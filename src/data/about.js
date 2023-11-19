@@ -3,9 +3,24 @@ const aboutCategories = [
     title: "blablabla",
     isOpen: false,
     folders: [
-      { name: "bio", color: "red", isOpen: false },
-      { name: "interests", color: "green", isOpen: false },
-      { name: "education", color: "blue", isOpen: false },
+      {
+        name: "bio",
+        color: "red",
+        isOpen: false,
+        items: ["qqqqq", "wwwww", "eeeee"],
+      },
+      {
+        name: "interests",
+        color: "green",
+        isOpen: false,
+        items: ["qqq", "www", "eee"],
+      },
+      {
+        name: "education",
+        color: "blue",
+        isOpen: false,
+        items: ["q", "w", "e"],
+      },
     ],
   },
   {

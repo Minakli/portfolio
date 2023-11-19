@@ -12,7 +12,6 @@ export default function Folder({
   showFolder,
   setShowFolder,
 }) {
-  // console.log(showFolder);
   return (
     <div className={s.wrapper}>
       <button
@@ -62,7 +61,8 @@ export default function Folder({
           {folder.name}
         </p>
       </button>
-      {children}
+      <div></div>
+      {folder.isOpen == true ? children : null}
     </div>
   );
 }

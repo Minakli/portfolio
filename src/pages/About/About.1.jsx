@@ -26,8 +26,10 @@ export default function About({}) {
                   showFolder={showFolder}
                   setShowFolder={setShowFolder}
                 >
-                  {folder.items
-                    ? folder.items.map((item) => (
+                  {console.log(folder.items)}
+                  {console.log(folder.items)}
+                  {elem.items
+                    ? elem.items.map((item) => (
                         <FolderItem
                           item={item}
                           key={Math.random()}

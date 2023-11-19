@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  gap: 10px;
+  padding: 5px 0 5px 42px;
+  color: grey;
+}
+.img {
+  display: block;
+  width: 16px;
+  height: 15px;
+}
+.active {
+}
+.inactive {
+}

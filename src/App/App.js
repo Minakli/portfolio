@@ -1,5 +1,5 @@
-import Layout from "../Layout/Layout";
 import "./Global.module.css";
+import Layout from "../Layout/Layout";
 import Hello from "../pages/Hello/Hello";
 import About from "../pages/About/About";
 import Projects from "../pages/Projects/Projects";

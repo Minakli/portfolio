@@ -1,5 +1,44 @@
+@font-face {
+  font-family: "Fira Code";
+  src: url("../assets/fonts/Fira Code/FiraCode-Light.woff2") format("woff2"),
+    url("../assets/fonts/Fira Code/FiraCode-Light.ttf") format("ttf");
+  font-weight: 300; /*light*/
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Code";
+  src: url("../assets/fonts/Fira Code/FiraCode-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Fira Code/FiraCode-Regular.ttf") format("ttf");
+  font-weight: 400; /*Regular*/
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Code";
+  src: url("../assets/fonts/Fira Code/FiraCode-Medium.woff2") format("woff2"),
+    url("../assets/fonts/Fira Code/FiraCode-Medium.ttf") format("ttf");
+  font-weight: 500; /*light*/
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Code";
+  src: url("../assets/fonts/Fira Code/FiraCode-SemiBold.woff2") format("woff2"),
+    url("../assets/fonts/Fira Code/FiraCode-SemiBold.ttf") format("ttf");
+  font-weight: 600; /*light*/
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Code";
+  src: url("../assets/fonts/Fira Code/FiraCode-Bold.woff2") format("woff2"),
+    url("../assets/fonts/Fira Code/FiraCode-Bold.ttf") format("ttf");
+  font-weight: 700; /*light*/
+  font-style: normal;
+}
 * {
+  font-family: "Fira Code", sans-serif;
   box-sizing: border-box;
+  font-weight: 450;
+  font-size: 16px;
   margin: 0;
   padding: 0;
   text-decoration: none;
