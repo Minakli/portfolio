@@ -4,9 +4,12 @@ import Category from "../../components/Category/Category";
 import Folder from "../../components/Folder/Folder";
 import aboutCategories from "../../data/about.js";
 import FolderItem from "../../components/FolderItem/FolderItem";
+import InfoBox from "../../components/InfoBox/InfoBox";
+import texts from "../../data/texts.js";
 
 export default function About({}) {
   const [showFolder, setShowFolder] = useState(aboutCategories);
+  const [folderItemSelected, setFolderItemSelected] = useState("");
   return (
     <div className={s.wrapper}>
       <div className={s.left__sidebar}></div>
@@ -33,8 +36,10 @@ export default function About({}) {
                           key={Math.random()}
                           showFolder={showFolder}
                           setShowFolder={setShowFolder}
+                          folderItemSelected={folderItemSelected}
+                          setFolderItemSelected={setFolderItemSelected}
                         >
-                          {item}
+                          {item.title}
                         </FolderItem>
                       ))
                     : null}
@@ -44,7 +49,15 @@ export default function About({}) {
           );
         })}
       </div>
-      <div className={s.left__section}></div>
+      <div className={s.left__section}>
+        {texts[folderItemSelected] ? (
+          <InfoBox
+            text={texts[folderItemSelected]}
+            folderItemSelected={folderItemSelected}
+          />
+        ) : null}
+        {console.log(texts[folderItemSelected])}
+      </div>
       <div className={s.right__section}></div>
     </div>
   );

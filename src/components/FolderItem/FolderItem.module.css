@@ -2,7 +2,8 @@
   display: flex;
   gap: 10px;
   padding: 5px 0 5px 42px;
-  color: grey;
+  background-color: inherit;
+  cursor: pointer;
 }
 .img {
   display: block;
@@ -10,6 +11,9 @@
   height: 15px;
 }
 .active {
+  color: aliceblue;
 }
+
 .inactive {
+  color: grey;
 }

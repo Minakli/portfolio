@@ -1,12 +1,25 @@
 import s from "./FolderItem.module.css";
 import m from "./m.svg";
 
-export default function FolderItem({ children }) {
+export default function FolderItem({
+  item,
+  children,
+  showFolder,
+  setShowFolder,
+  folderItemSelected,
+  setFolderItemSelected,
+}) {
   return (
-    <div className={s.wrapper}>
+    <button
+      className={s.wrapper}
+      onClick={() => {
+        setFolderItemSelected(item.title);
+      }}
+    >
       <img className={s.img} src={m} alt="item" />
-      <p>{children}</p>
-      {/* <p className={(isSelected = true ? s.active : s.inactive)}></p> */}
-    </div>
+      <p className={folderItemSelected === item.title ? s.active : s.inactive}>
+        {children}
+      </p>
+    </button>
   );
 }

@@ -1,9 +1,9 @@
 import s from "./InfoBox.module.css";
+import { useRef, useEffect, useState } from "react";
 
-export default function InfoBox() {
+export default function InfoBox({ text }) {
   // useRef for Info left div
   const infoRef = useRef(null);
-
   // Array lines for Info left div content
   const [infoLinesArr, setInfoLinesArr] = useState([]);
 
@@ -12,13 +12,15 @@ export default function InfoBox() {
 
   // Dividing Info left div content into lines
   useEffect(() => {
+    console.log(text);
+    console.log(infoRef.current);
     if (infoRef.current) {
       let infoBoxWidth = infoRef.current.getBoundingClientRect().width;
 
       // Width for one letter
       let signWidth = 16;
 
-      const text = personalInfo.content;
+      // const text = personalInfo.content;
       let words = text.split(" ");
       let currentLine = "";
       let currentWidth = 0;
@@ -38,6 +40,11 @@ export default function InfoBox() {
       updatedLine.push(currentLine);
       setInfoLinesArr(updatedLine);
     }
-  }, []);
-  return <div></div>;
+  }, [text]);
+  console.log(infoLinesArr);
+  return (
+    <div className={s.box} ref={infoRef}>
+      {infoLinesArr}
+    </div>
+  );
 }
