@@ -21,6 +21,7 @@ export default function About({}) {
               elem={elem}
               showFolder={showFolder}
               setShowFolder={setShowFolder}
+              setFolderItemSelected={setFolderItemSelected}
             >
               {elem.folders.map((folder) => (
                 <Folder
@@ -28,6 +29,7 @@ export default function About({}) {
                   folder={folder}
                   showFolder={showFolder}
                   setShowFolder={setShowFolder}
+                  setFolderItemSelected={setFolderItemSelected}
                 >
                   {folder.items
                     ? folder.items.map((item) => (
@@ -56,7 +58,6 @@ export default function About({}) {
             folderItemSelected={folderItemSelected}
           />
         ) : null}
-        {console.log(texts[folderItemSelected])}
       </div>
       <div className={s.right__section}></div>
     </div>

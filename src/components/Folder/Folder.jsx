@@ -11,16 +11,19 @@ export default function Folder({
   children,
   showFolder,
   setShowFolder,
+  setFolderItemSelected,
 }) {
   return (
     <div className={s.wrapper}>
       <button
         className={folder.isOpen === true ? s.btn__active : s.btn}
         onClick={() => {
-          folder.isOpen === true
-            ? (folder.isOpen = false)
-            : (folder.isOpen = true);
-
+          if (folder.isOpen === true) {
+            folder.isOpen = false;
+            setFolderItemSelected("");
+          } else {
+            folder.isOpen = true;
+          }
           let newShowFolder = showFolder.map((item) => {
             let newFolders = item.folders.map((unit) =>
               unit.name === folder.name ? folder : unit

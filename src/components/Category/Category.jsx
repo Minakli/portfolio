@@ -7,13 +7,19 @@ export default function Category({
   elem,
   showFolder,
   setShowFolder,
+  setFolderItemSelected,
 }) {
   return (
     <div className={s.wrapper}>
       <button
         className={s.btn}
         onClick={() => {
-          elem.isOpen === true ? (elem.isOpen = false) : (elem.isOpen = true);
+          if (elem.isOpen === true) {
+            elem.isOpen = false;
+            setFolderItemSelected(" ");
+          } else {
+            elem.isOpen = true;
+          }
           let tmp = showFolder.map((item) =>
             item.title === elem.title ? JSON.parse(JSON.stringify(elem)) : item
           );
