@@ -20,7 +20,7 @@ export default function Folder({
         onClick={() => {
           if (folder.isOpen === true) {
             folder.isOpen = false;
-            setFolderItemSelected("");
+            // setFolderItemSelected("");
           } else {
             folder.isOpen = true;
           }

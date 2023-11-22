@@ -1,5 +1,4 @@
 import s from "./Category.module.css";
-import { useState } from "react";
 import arrowWhiteRight from "./arrow-white-right.svg";
 import arrowWhiteDown from "./arrow-white-down.svg";
 export default function Category({
@@ -7,22 +6,20 @@ export default function Category({
   elem,
   showFolder,
   setShowFolder,
-  setFolderItemSelected,
 }) {
   return (
     <div className={s.wrapper}>
       <button
         className={s.btn}
         onClick={() => {
-          if (elem.isOpen === true) {
-            elem.isOpen = false;
-            setFolderItemSelected(" ");
-          } else {
-            elem.isOpen = true;
-          }
-          let tmp = showFolder.map((item) =>
-            item.title === elem.title ? JSON.parse(JSON.stringify(elem)) : item
-          );
+          let tmp = showFolder.map((item) => {
+            if (item.title === elem.title) {
+              item.isOpen === true
+                ? (item.isOpen = false)
+                : (item.isOpen = true);
+            }
+            return item;
+          });
           setShowFolder(tmp);
         }}
       >

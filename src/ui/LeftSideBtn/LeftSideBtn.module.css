@@ -1,0 +1,17 @@
+.btn {
+  height: 24px;
+  /* transition-delay: 1s; */
+  cursor: pointer;
+}
+.btn:hover {
+  filter: brightness(200%);
+}
+.btn:active {
+  filter: brightness(350%);
+}
+.img {
+  /* width: 24px;
+  height: 24px; */
+  color: #607b96;
+  background-color: inherit;
+}

@@ -6,6 +6,11 @@
 .left__sidebar {
   width: 68px;
   border-right: 1px solid #1e2d3d;
+  /* display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center; */
 }
 .categories__panel {
   width: 243px;

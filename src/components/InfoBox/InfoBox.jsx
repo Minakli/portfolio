@@ -2,7 +2,11 @@ import s from "./InfoBox.module.css";
 import { useRef, useEffect, useState } from "react";
 import cross from "./cross.svg";
 
-export default function InfoBox({ text }) {
+export default function InfoBox({
+  text,
+  folderItemSelected,
+  setFolderItemSelected,
+}) {
   let lastNum = 0;
   // useRef for Info left div
   const infoRef = useRef(null);
@@ -18,7 +22,7 @@ export default function InfoBox({ text }) {
       let infoBoxWidth = infoRef.current.getBoundingClientRect().width;
 
       // Width for one letter
-      let signWidth = 12;
+      let signWidth = 11;
 
       // const text = personalInfo.content;
       let words = text.split(" ");
@@ -28,7 +32,7 @@ export default function InfoBox({ text }) {
       for (let i = 0; i < words.length; i++) {
         let word = words[i];
         let wordWidth = word.length * signWidth;
-        if (currentWidth + wordWidth <= infoBoxWidth - 80) {
+        if (currentWidth + wordWidth <= infoBoxWidth - 120) {
           currentLine += word += " ";
           currentWidth += wordWidth + signWidth;
         } else {
@@ -47,7 +51,12 @@ export default function InfoBox({ text }) {
         <div className={s.title}>
           <span className={s.title__span}>{"title"}</span>
 
-          <button className={s.cross__btn}>
+          <button
+            className={s.cross__btn}
+            onClick={() => {
+              setFolderItemSelected("");
+            }}
+          >
             <img src={cross} alt="cross" />
           </button>
         </div>
@@ -60,7 +69,7 @@ export default function InfoBox({ text }) {
         <p className={s.text}>
           <span className={s.line__first}></span>
           <span className={s.line__second}>2</span>&nbsp;&nbsp;&nbsp;*&nbsp;
-          {"description"}
+          {folderItemSelected ? folderItemSelected : null}
         </p>
         {infoLinesArr.map((line, index) => {
           lastNum = index + 4;

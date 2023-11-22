@@ -25,7 +25,7 @@
 }
 /* Сжимаемый контейнер*/
 .flex_shrink {
-  width: 177px;
+  width: 179px;
   flex-shrink: 1;
 }
 

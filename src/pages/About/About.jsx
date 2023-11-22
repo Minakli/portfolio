@@ -6,13 +6,20 @@ import aboutCategories from "../../data/about.js";
 import FolderItem from "../../components/FolderItem/FolderItem";
 import InfoBox from "../../components/InfoBox/InfoBox";
 import texts from "../../data/texts.js";
+import AboutLeftSide from "../../ui/AboutLeftSide/AboutLeftSide.jsx";
 
 export default function About({}) {
   const [showFolder, setShowFolder] = useState(aboutCategories);
   const [folderItemSelected, setFolderItemSelected] = useState("");
   return (
     <div className={s.wrapper}>
-      <div className={s.left__sidebar}></div>
+      <div className={s.left__sidebar}>
+        <AboutLeftSide
+          showFolder={showFolder}
+          setShowFolder={setShowFolder}
+          setFolderItemSelected={setFolderItemSelected}
+        />
+      </div>
       <div className={s.categories__panel}>
         {aboutCategories.map((elem, index) => {
           return (
@@ -56,6 +63,7 @@ export default function About({}) {
           <InfoBox
             text={texts[folderItemSelected]}
             folderItemSelected={folderItemSelected}
+            setFolderItemSelected={setFolderItemSelected}
           />
         ) : null}
       </div>
