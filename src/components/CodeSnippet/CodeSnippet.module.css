@@ -1,0 +1,92 @@
+.wrapper {
+  margin: 30px 40px;
+  color: aliceblue;
+  display: block;
+  color: #607b96;
+  font-family: "Fira Code", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 12px;
+}
+.author {
+  display: flex;
+  /* height: 36px; */
+  gap: 10px;
+}
+.img {
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+.author__title {
+}
+.username {
+  color: #5565e8;
+  font-family: "Fira Code", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+.date {
+  font-size: 12px;
+  font-weight: 450;
+}
+.social {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 18px;
+  /* width: 191px; */
+}
+.details {
+  display: flex;
+  gap: 5px;
+  height: 18px;
+  margin-bottom: auto;
+  text-decoration: none;
+  color: #607b96;
+}
+
+.details:active {
+  color: #607b96;
+  text-decoration: none;
+  filter: brightness(300%);
+}
+.details:visited {
+  color: #607b96;
+  text-decoration: none;
+}
+.details:hover {
+  color: #607b96;
+  text-decoration: none;
+}
+.details__img {
+  display: block;
+}
+.details__text {
+  /* margin-bottom: 15px; */
+  vertical-align: super;
+}
+.stars {
+  display: flex;
+  gap: 5px;
+}
+.star__img {
+  display: block;
+}
+.star__count {
+}
+.star__text {
+}
+.body {
+  border: 1px solid #1e2d3d;
+  padding: 24px 30px;
+  border-radius: 15px;
+  white-space: pre-wrap;
+}

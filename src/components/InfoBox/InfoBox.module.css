@@ -30,6 +30,7 @@
 .cross__btn {
   background: #011627;
   border: none;
+  cursor: pointer;
 }
 .cross__btn:hover {
   filter: brightness(150%);

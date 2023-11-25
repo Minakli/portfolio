@@ -1,5 +1,5 @@
 import s from "./About.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Category from "../../components/Category/Category";
 import Folder from "../../components/Folder/Folder";
 import aboutCategories from "../../data/about.js";
@@ -7,10 +7,24 @@ import FolderItem from "../../components/FolderItem/FolderItem";
 import InfoBox from "../../components/InfoBox/InfoBox";
 import texts from "../../data/texts.js";
 import AboutLeftSide from "../../ui/AboutLeftSide/AboutLeftSide.jsx";
+import CodeSnippetBox from "../../components/CodeSnippetBox/CodeSnippetBox";
 
 export default function About({}) {
   const [showFolder, setShowFolder] = useState(aboutCategories);
   const [folderItemSelected, setFolderItemSelected] = useState("");
+  const [codeSnippetArr, setCodeSnippetArr] = useState([]);
+  useEffect(() => {
+    fetch("https://api.github.com/users/Minakli/gists")
+      .then((response) => response.json())
+      .then((data) => {
+        setCodeSnippetArr(data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+  console.log(codeSnippetArr);
+
   return (
     <div className={s.wrapper}>
       <div className={s.left__sidebar}>
@@ -67,7 +81,12 @@ export default function About({}) {
           />
         ) : null}
       </div>
-      <div className={s.right__section}></div>
+      <div className={s.right__section}>
+        {/* <div className={s.snippet__title}>
+          <div>// Code snippet showcase:</div>
+        </div> */}
+        <CodeSnippetBox codeSnippetArr={codeSnippetArr} />
+      </div>
     </div>
   );
 }
